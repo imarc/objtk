@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "astrum": "^1.9.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "mini-css-extract-plugin": "^0.4.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "postcss": "^7.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "webpack": "^4.0.0"
+  },
+  "scripts": {
+    "build":  "./node_modules/webpack/bin/webpack.js -p --config ./resources/webpack/webpack.config.js --display-error-details",
+    "watch":  "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js --display-error-details",
+    "serve":  "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js",
+    "astrum": "./node_modules/astrum/manager/astrum.js"
+  }
+}

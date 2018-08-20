@@ -1,0 +1,13 @@
+.action {
+    display: block;
+
+    @nest .actions & {
+        display: inline-block;
+        margin-right: .5rem;
+        float: left;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

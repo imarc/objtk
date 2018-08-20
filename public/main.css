@@ -1,0 +1,29 @@
+.action {
+    display: block
+}
+.actions .action {
+    display: inline-block;
+    margin-right: .5rem;
+    float: left
+}
+.actions .action:last-child {
+    margin-right: 0;
+}
+.action {
+    padding: 1rem;
+    background-color: #8a8a8a;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+.action.suggested {
+    background-color: #c44d4f;
+}
+.action.cancel {
+    background-color: transparent;
+    color: inherit;
+}
+.title {
+    color: #c44d4f;
+}
+
