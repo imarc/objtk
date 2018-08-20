@@ -25,5 +25,5 @@ npm run watch
 Serve the Astrum Pattern Library with Browser Sync.
 
 ```
-npm run watch
+npm run serve
 ```
