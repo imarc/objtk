@@ -1,0 +1,24 @@
+.toggle {
+	color: var(--white);
+	background-color: var(--grey);
+
+	& > .option {
+
+		& > label {
+			padding: var(--padding) calc(var(--padding) * 2);
+			border: solid var(--border-toggle, var(--border));
+			border-color: var(--border-color-toggle, var(--dark-grey));
+			border-right-width: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		&:last-child > label {
+			border-right-width: var(--border-toggle, var(--border));
+		}
+
+		& > input:checked + label {
+			background-color: var(--light-grey);
+		}
+	}
+}

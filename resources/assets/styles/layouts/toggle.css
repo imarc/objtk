@@ -1,0 +1,18 @@
+.toggle {
+	display: flex;
+
+	& > .option {
+		display: block;
+		flex-grow: 1;
+
+		& > input {
+			display: none;
+		}
+
+		& > label {
+			display: block;
+			box-sizing: border-box;
+			height: 100%;
+		}
+	}
+}

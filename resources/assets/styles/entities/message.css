@@ -1,0 +1,4 @@
+.message {
+	padding: var(--padding-message, var(--padding));
+	border: solid var(--border-message, var(--border));
+}
