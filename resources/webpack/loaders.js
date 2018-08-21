@@ -18,7 +18,7 @@ const CSSLoader = {
     {
       loader: 'css-loader',
       options: {
-          importLoaders: 1
+        importLoaders: 1
       },
     },
     {

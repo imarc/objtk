@@ -74,6 +74,73 @@
                     "title": "Grouped Actions"
                 }
             ]
+        },
+        {
+            "name": "messages",
+            "title": "Messages",
+            "components": [
+                {
+                    "group": "messages",
+                    "name": "default",
+                    "title": "Default Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "important",
+                    "title": "Important Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "success",
+                    "title": "Success Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "important-success",
+                    "title": "Important Success Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "warning",
+                    "title": "Warning Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "important-warning",
+                    "title": "Warning Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "error",
+                    "title": "Error Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "important-error",
+                    "title": "Important Error Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "info",
+                    "title": "Info Message"
+                },
+                {
+                    "group": "messages",
+                    "name": "important-info",
+                    "title": "Important Info Message"
+                }
+            ]
+        },
+        {
+            "name": "toggles",
+            "title": "Toggles",
+            "components": [
+                {
+                    "group": "toggles",
+                    "name": "default",
+                    "title": "Default Toggle"
+                }
+            ]
         }
     ],
     "version": "1.9.5"

@@ -4,8 +4,7 @@ const plugins  = require('./plugins');
 
 module.exports = {
   entry: [
-      './resources/assets/scripts/main.js',
-      './resources/assets/styles/main.css'
+      './resources/assets/scripts/main.js'
   ],
   module: {
     rules: [
@@ -20,6 +19,10 @@ module.exports = {
     path: path.resolve('./public'),
     filename: '[name].js'
   },
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: true
+  }
 };
 
 if (process.env.npm_lifecycle_event == 'serve') {

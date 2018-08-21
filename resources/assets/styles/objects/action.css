@@ -1,7 +1,0 @@
-.action {
-    padding: 1rem;
-    background-color: var(--bgcolor-action, var(--grey));
-    color: var(--color-action, white);
-    cursor: pointer;
-    text-align: center;
-}

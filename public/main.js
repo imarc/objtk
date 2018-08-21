@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvYXNzZXRzL3NjcmlwdHMvbWFpbi5qcy5qcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/assets/scripts/main.js\n");
+eval("\n\n__webpack_require__(/*! ../styles/main.css */ \"./resources/assets/styles/main.css\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvYXNzZXRzL3NjcmlwdHMvbWFpbi5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL3NjcmlwdHMvbWFpbi5qcz8zNDM1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnLi4vc3R5bGVzL21haW4uY3NzJztcbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/assets/scripts/main.js\n");
 
 /***/ }),
 
@@ -103,21 +103,20 @@ eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset
   !*** ./resources/assets/styles/main.css ***!
   \******************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleNotFoundError: Module not found: Error: Can't resolve './action-suggested.css' in '/home/matt/Dropbox/Projects/objtk/resources/assets/styles'\\n    at factory.create (/home/matt/Dropbox/Projects/objtk/node_modules/webpack/lib/Compilation.js:796:10)\\n    at factory (/home/matt/Dropbox/Projects/objtk/node_modules/webpack/lib/NormalModuleFactory.js:397:22)\\n    at resolver (/home/matt/Dropbox/Projects/objtk/node_modules/webpack/lib/NormalModuleFactory.js:130:21)\\n    at asyncLib.parallel (/home/matt/Dropbox/Projects/objtk/node_modules/webpack/lib/NormalModuleFactory.js:224:22)\\n    at /home/matt/Dropbox/Projects/objtk/node_modules/neo-async/async.js:2817:7\\n    at /home/matt/Dropbox/Projects/objtk/node_modules/neo-async/async.js:6783:13\\n    at normalResolver.resolve (/home/matt/Dropbox/Projects/objtk/node_modules/webpack/lib/NormalModuleFactory.js:214:25)\\n    at doResolve (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:184:12)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn0 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:15:1)\\n    at resolver.doResolve (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:37:5)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn0 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:15:1)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn0 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:12:1)\\n    at resolver.doResolve (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:42:38)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn42 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:393:1)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn0 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:12:1)\\n    at resolver.doResolve (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:42:38)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn1 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:24:1)\\n    at hook.callAsync (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/Resolver.js:238:5)\\n    at _fn0 (eval at create (/home/matt/Dropbox/Projects/objtk/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:15:1)\\n    at fs.stat (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:22:13)\\n    at process.nextTick (/home/matt/Dropbox/Projects/objtk/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:73:15)\\n    at process._tickCallback (internal/process/next_tick.js:176:11)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvYXNzZXRzL3N0eWxlcy9tYWluLmNzcy5qcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/assets/styles/main.css\n");
+eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvYXNzZXRzL3N0eWxlcy9tYWluLmNzcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9hc3NldHMvc3R5bGVzL21haW4uY3NzPzdjYjkiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/assets/styles/main.css\n");
 
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************!*\
-  !*** multi ./resources/assets/scripts/main.js ./resources/assets/styles/main.css ***!
-  \***********************************************************************************/
+/*!************************************************!*\
+  !*** multi ./resources/assets/scripts/main.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./resources/assets/scripts/main.js */"./resources/assets/scripts/main.js");
-module.exports = __webpack_require__(/*! ./resources/assets/styles/main.css */"./resources/assets/styles/main.css");
+module.exports = __webpack_require__(/*! ./resources/assets/scripts/main.js */"./resources/assets/scripts/main.js");
 
 
 /***/ })
