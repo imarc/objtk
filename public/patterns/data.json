@@ -31,10 +31,10 @@
     },
     "assets": {
         "css": [
-            "../main.css"
+            "../styles/main.css"
         ],
         "js": [
-            "../main.js"
+            "../scripts/main.js"
         ]
     },
     "font_libraries": {
