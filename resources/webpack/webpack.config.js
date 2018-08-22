@@ -1,11 +1,10 @@
-const path     = require('path');
-const loaders  = require('./loaders');
-const plugins  = require('./plugins');
+const path    = require('path');
+const loaders = require('./loaders');
+const plugins = require('./plugins');
+const entries = require('./entries');
 
 module.exports = {
-  entry: [
-      './resources/assets/scripts/main.js'
-  ],
+  entry: entries,
   module: {
     rules: [
       loaders.CSSLoader,
@@ -13,11 +12,12 @@ module.exports = {
     ]
   },
   plugins: [
+      plugins.BrowserSync,
       plugins.MiniCSS
   ],
   output: {
     path: path.resolve('./public'),
-    filename: '[name].js'
+    filename: 'scripts/[name].js'
   },
   watchOptions: {
     aggregateTimeout: 300,

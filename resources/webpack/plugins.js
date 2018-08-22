@@ -3,7 +3,7 @@ const BrowserSync = require('browser-sync-webpack-plugin');
 
 module.exports = {
   MiniCSS: new MiniCSS({
-      filename: '[name].css'
+      filename: 'styles/[name].css'
   }),
   BrowserSync: new BrowserSync({
     host: 'localhost',
