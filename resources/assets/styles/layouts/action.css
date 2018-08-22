@@ -1,7 +1,7 @@
 .action {
     display: block;
 
-    @nest .actions & {
+    @nest .group & {
         display: inline-block;
         margin-right: .5rem;
         float: left;

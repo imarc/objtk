@@ -34,37 +34,22 @@ Serve the Astrum Pattern Library with Browser Sync.
 npm run serve
 ```
 
-### Add a Component
-
-Astrum is used for building the pattern library.  Since astrum is first and foremost concerned with HTML, this will not add corresponding entities/layouts/themes (that's on you), but will provide you a space to organize and define the markup that constitutes a given component.
+### Add an attribute
 
 ```
-npm run astrum new <section>/<component>
+npm run add --objtk:attribute=<component>.css
 ```
-
-### Add an Entity
-
-```
-npm run add --objtk:entity=<name>.css
-```
-
 
 ### Add a Layout
 
 ```
-npm run add --objtk:layout=<name>.css
+npm run add --objtk:layout=<component>.css
 ```
 
 ### Add a Theme
 
 ```
-npm run add --objtk:theme=<name>.css
-```
-
-### Add a Mixin
-
-```
-npm run add --objtk:mixin=<name>.css
+npm run add --objtk:theme=<component>.css
 ```
 
 ## Object Oriented CSS
@@ -77,34 +62,53 @@ Object oriented CSS is a style of writing CSS which incorporates principles of o
 
 ### Separation of Concerns
 
-Traditional approaches to CSS include ideas of "components" or "patterns."  While these are a major step forward in modularity, they do not do enough to encourage clear separation of concerns with respect to CSS code.  Each component is generally still a mix of varying concerns including the theming (colors and image), entities (application of thematic elements as a particular veneer), and layout (placement of elements).
+ObjTK divides each "component" into four distinct fragments:
 
-ObjTK divides each "component" into three distinct pieces:
+- Structures (HTML)
+- Attributes (CSS Style)
+- Layouts (CSS Display and Positioning)
+- Themes (CSS Values and Variables)
 
-- Entity
-- Layout
-- Theme
+Each fragment of a component has a separate directory which contains one CSS file per component.
 
-#### Entities
+#### Components
 
-Entities define those properties of a component which constitute it's "veneer."  The "veneer" is the stylistic aspects of a component which are unrelated to the placement or layout of lements within the component.
+A component is a combination of HTML (Structure) and one or more CSS fragments (Attributes, Layouts, Themes).
 
-Some entities are very simple:
+- A component name is a combination of 1 or more _single word_ CSS class names separated by dashes.
+- A component may extend another component by adding classes.
+- A component may contain other components.
+
+##### Example Component Names
+
+- date
+- date-birthday
+- date-published
+- message
+- message-error
+
+To create a new component, run:
+
+```
+npm run make --objtk:component=<section>/<component>
+```
+
+The above command will create a new component in the Astrum Pattern Library, as well as create CSS placeholder files for the component's attributes and layouts (but not themes).
+
+_Note: The section can be the common component name, e.g. `messages` for all messages, or a section related to the overall type of elements, e.g. `forms`_
+
+##### Structures
+
+Structures are an HTML element whose classes map directly to the component name.  Note that classes themselves should never be more than one word.
 
 ```html
 <h1 class="title">This is the title of an article</h1>
 ```
 
-```scss
-.title {
-	font-size: 2rem;
-}
-```
-
-In the above example the `font-size` is considered a property of the entity. Each entity is the master of its properties.  This concept is called "encapsulation."  In addition to various CSS properties, other entities can also considered to be properties:
+A single structure may contain any number of child HTML elements or sub-structures:
 
 ```html
-<div class="item">
+<div class="item news">
 	<h1 class="title">This is the title of an item</h1>
 	<p class="summary">
 		Lorem ipsum dolor sit amet, consectetur
@@ -114,26 +118,31 @@ In the above example the `font-size` is considered a property of the entity. Eac
 		nostrud exercitation ullamco laboris
 		nisi ut aliquip ex ea commodo consequat.
 	</p>
+	<a href="#">Read More</a>
 </div>
 ```
 
-The above HTML represents an `item` entity which has two properties which are child entities, namely `title` and `summary`.  Each of these entities would have a separate `.css` file defined in the `resources/styles/assets/entities` folder:
+##### Attributes
 
-File: `resources/styles/assets/entities/title.css`
+Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  You can add an attribute only by running the following at the command line:
+
+```
+npm run add --objtk:attribute=<component>.css
+```
+
+The attribute will be added by creating the requisite CSS file in the `resources/assets/attributes` directory.
+
+Some attributes are very simple:
+
 ```scss
 .title {
 	font-size: 2rem;
 }
 ```
 
-File: `resources/styles/assets/entities/summary.css`
-```scss
-.summary {
-	font-style: italic;
-}
-```
+If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
-File: `resources/styles/assets/entities/item.css`
+File: `resources/styles/assets/attribute/item.css`
 ```scss
 .item {
 	padding: 2rem;
@@ -144,11 +153,11 @@ File: `resources/styles/assets/entities/item.css`
 }
 ```
 
-Note in the final example the parent `item` overloads the child `title`'s color property.  Although the `title` constitutes a separate entity, parent entities determine those properties which _differ_ from the base-entity.
+Although the `title` constitutes a separate component, when nested in a parent component, it is the parent component's attributes which determines those properties which _differ_ from the base-attribute.
 
-##### Valid Properties
+###### Valid Attribute Properties
 
-Not all CSS properties are valid entity properties.  Examples of valid entity properties include:
+Not all CSS properties are valid attribute properties.  Examples of valid attribute properties include:
 
 - font-size
 - font-family
@@ -157,9 +166,9 @@ Not all CSS properties are valid entity properties.  Examples of valid entity pr
 - background-color
 - etc...
 
-###### Invalid properties
+###### Invalid Attribute Properties
 
-Properties which are invalid on an entity concern themselves with the placement or "layout" of things.  Examples of invalid entity properties include:
+Properties which are invalid on an attribute concern themselves with the placement or "layout" of things.  Examples of invalid attribute properties include:
 
 - display
 - margin
@@ -169,20 +178,18 @@ Properties which are invalid on an entity concern themselves with the placement 
 
 #### Layouts
 
-While entities constitute the veneer of a component, layouts separate out the placement of various child elements or entities with respect to one another.  Layouts are defined separately from entities such that one can easily change the placement of various elements or child entities within an entity without touching or working around the veneer.
+While attributes constitute the veneer of a component, layouts separate out the placement of a component's child elements or structures with respect to one another.  Layouts are defined separately from attributes such that one can easily change the layout of a component without affecting the overall style.
 
 File: `resources/styles/assets/layouts/title.css`
-
 ```scss
 .title {
 	margin-bottom: 1em;
 }
 ```
 
-Just as with entities, a parent can overload its child's layout:
+Just as with attributes, a parent can overload its child's layout:
 
 File: `resources/styles/assets/layouts/item.css`
-
 ```scss
 .item {
 	& .title {
@@ -190,5 +197,3 @@ File: `resources/styles/assets/layouts/item.css`
 	}
 }
 ```
-
-#### Themes

@@ -12,6 +12,7 @@
     "mime": "^2.3.1",
     "mini-css-extract-plugin": "^0.4.1",
     "postcss": "^7.0.2",
+    "postcss-css-variables": "^0.9.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-import": "^12.0.0",
@@ -26,7 +27,7 @@
     "build": "./node_modules/webpack/bin/webpack.js -p --config ./resources/webpack/webpack.config.js --display-error-details",
     "watch": "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js --display-error-details",
     "serve": "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js",
-    "astrum": "./node_modules/astrum/manager/astrum.js",
-    "add": "./node_modules/touch/bin/nodetouch.js ./resources/assets/styles/entities/$npm_package_config_entity ./resources/assets/styles/layouts/$npm_package_config_layout ./resources/assets/styles/mixins/$npm_package_config_mixin ./resources/assets/styles/themes/$npm_package_config_theme ./resources/assets/styles/main.css"
+    "make": "./node_modules/astrum/manager/astrum.js new $npm_package_config_component; npm run add --objtk:attribute=`basename $npm_package_config_component`.css  --objtk:layout=`basename $npm_package_config_component`.css",
+    "add": "./node_modules/touch/bin/nodetouch.js ./resources/assets/styles/attributes/$npm_package_config_attribute ./resources/assets/styles/layouts/$npm_package_config_layout ./resources/assets/styles/themes/$npm_package_config_theme ./resources/assets/styles/main.css"
   }
 }

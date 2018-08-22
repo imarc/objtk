@@ -1,0 +1,21 @@
+:root {
+    font-family: sans-serif;
+    font-size: 10px;
+
+    --black: #000000;
+    --blue: #4d7498;
+    --light-grey: #bbbbbb;
+    --dark-grey: #444444;
+    --grey: #808080;
+    --green: #7ab677;
+    --orange: #e4b03c;
+    --white: #ffffff;
+    --red: #c44d4f;
+
+    --background-color: #ffffff;
+    --background-color-alt: #222222;
+    --color-alt: #ffffff;
+    --color: #222222;
+    --padding: 2rem;
+    --border: 1px;
+}

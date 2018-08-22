@@ -60,18 +60,13 @@
             "components": [
                 {
                     "group": "actions",
-                    "name": "default",
+                    "name": "action",
                     "title": "Default Action"
                 },
                 {
                     "group": "actions",
-                    "name": "suggested",
+                    "name": "action-suggested",
                     "title": "Suggested Action"
-                },
-                {
-                    "group": "actions",
-                    "name": "grouped",
-                    "title": "Grouped Actions"
                 }
             ]
         },
@@ -81,64 +76,64 @@
             "components": [
                 {
                     "group": "messages",
-                    "name": "default",
+                    "name": "message",
                     "title": "Default Message"
                 },
                 {
                     "group": "messages",
-                    "name": "important",
+                    "name": "message-important",
                     "title": "Important Message"
                 },
                 {
                     "group": "messages",
-                    "name": "success",
+                    "name": "message-success",
                     "title": "Success Message"
                 },
                 {
                     "group": "messages",
-                    "name": "important-success",
+                    "name": "message-success-important",
                     "title": "Important Success Message"
                 },
                 {
                     "group": "messages",
-                    "name": "warning",
+                    "name": "message-warning",
                     "title": "Warning Message"
                 },
                 {
                     "group": "messages",
-                    "name": "important-warning",
+                    "name": "message-warning-important",
                     "title": "Warning Message"
                 },
                 {
                     "group": "messages",
-                    "name": "error",
+                    "name": "message-error",
                     "title": "Error Message"
                 },
                 {
                     "group": "messages",
-                    "name": "important-error",
+                    "name": "message-error-important",
                     "title": "Important Error Message"
                 },
                 {
                     "group": "messages",
-                    "name": "info",
+                    "name": "message-info",
                     "title": "Info Message"
                 },
                 {
                     "group": "messages",
-                    "name": "important-info",
+                    "name": "message-info-important",
                     "title": "Important Info Message"
                 }
             ]
         },
         {
-            "name": "toggles",
-            "title": "Toggles",
+            "name": "input",
+            "title": "Input",
             "components": [
                 {
-                    "group": "toggles",
-                    "name": "default",
-                    "title": "Default Toggle"
+                    "group": "input",
+                    "name": "choice",
+                    "title": "Choice"
                 }
             ]
         }
