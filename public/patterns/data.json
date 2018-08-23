@@ -132,6 +132,11 @@
             "components": [
                 {
                     "group": "input",
+                    "name": "option",
+                    "title": "Option"
+                },
+                {
+                    "group": "input",
                     "name": "choice",
                     "title": "Choice"
                 }

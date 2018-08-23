@@ -12,7 +12,6 @@ module.exports = {
     ]
   },
   plugins: [
-      plugins.BrowserSync,
       plugins.MiniCSS
   ],
   output: {
@@ -24,6 +23,10 @@ module.exports = {
     poll: true
   }
 };
+
+//
+// Add Browser Sync if serving
+//
 
 if (process.env.npm_lifecycle_event == 'serve') {
     module.exports.plugins.push(plugins.BrowserSync);
