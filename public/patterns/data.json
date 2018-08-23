@@ -42,18 +42,19 @@
         "typography_web_fonts": null,
         "google_web_fonts": null
     },
-    "content": {
-        "show_first_page_on_load": true,
-        "title": "Overview",
-        "pages": [
-            {
-                "name": "introduction",
-                "title": "Introduction",
-                "file": "./pages/intro.md"
-            }
-        ]
-    },
+    "content": null,
     "groups": [
+        {
+            "name": "base",
+            "title": "Base",
+            "components": [
+                {
+                    "group": "base",
+                    "name": "_base",
+                    "title": "Basic HTML"
+                }
+            ]
+        },
         {
             "name": "actions",
             "title": "Actions",

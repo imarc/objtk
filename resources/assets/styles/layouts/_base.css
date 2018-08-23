@@ -1,0 +1,16 @@
+body > header,
+body > footer,
+body > section:not(.internal) {
+    & > :not(.billboard) {
+        @mixin container;
+    }
+}
+
+body > section.internal {
+    @mixin container;
+
+    @media (--screen-large) {
+        display: grid;
+        grid-template-columns: 30% auto;
+    }
+}

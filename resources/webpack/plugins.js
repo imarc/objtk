@@ -19,6 +19,7 @@ module.exports = {
     port: 3000,
     host: 'localhost',
     server: './public/',
-    startPath: '/patterns/'
+    startPath: '/patterns/',
+    files: ['./public/patterns/**/*']
   })
 };
