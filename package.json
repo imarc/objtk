@@ -13,12 +13,11 @@
     "mini-css-extract-plugin": "^0.4.1",
     "postcss": "^7.0.2",
     "postcss-comment": "^2.0.0",
-    "postcss-css-variables": "^0.9.0",
-    "postcss-cssnext": "^3.1.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-import": "^12.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-mixins": "^6.2.0",
+    "postcss-preset-env": "^5.3.0",
     "sugarss": "^2.0.0",
     "touch": "^3.1.0",
     "webpack": "^4.0.0",
@@ -30,6 +29,6 @@
     "watch": "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js --display-error-details",
     "serve": "./node_modules/webpack/bin/webpack.js -d --watch --config ./resources/webpack/webpack.config.js",
     "make": "./node_modules/astrum/manager/astrum.js new $npm_package_config_component; npm run add --objtk:attribute=`basename $npm_package_config_component`.css  --objtk:layout=`basename $npm_package_config_component`.css",
-    "add": "./node_modules/touch/bin/nodetouch.js ./resources/assets/styles/attributes/$npm_package_config_attribute ./resources/assets/styles/layouts/$npm_package_config_layout ./resources/assets/styles/themes/$npm_package_config_theme ./resources/assets/styles/main.css"
+    "add": "./node_modules/touch/bin/nodetouch.js ./resources/assets/styles/attributes/$npm_package_config_attribute ./resources/assets/styles/layouts/$npm_package_config_layout ./resources/assets/styles/themes/$npm_package_config_theme ./resources/assets/styles/_mixins/$npm_package_config_mixin ./resources/assets/styles/main.css"
   }
 }

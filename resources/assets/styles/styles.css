@@ -1,3 +1,29 @@
+@custom-media --screen-tablet screen and (min-width: 1024px);
+@custom-media --screen-desktop screen and (min-width: 1280px);
+@custom-media --screen-large screen and (min-width: 1584px);
+
 body {
     font-size: 1.6rem;
+    line-height: 1.5em;
+}
+
+body > header,
+body > footer,
+body > section:not(.internal) {
+    & > :not(.billboard) {
+        @mixin container;
+    }
+}
+
+body > section.internal {
+    @mixin container;
+
+    @media (--screen-large) {
+        display: grid;
+        grid-template-columns: 30% auto;
+    }
+}
+
+section.news {
+    background-color: #eee;
 }
