@@ -110,15 +110,7 @@ Structures will be created in the pattern library under `public/patterns/compone
 
 ##### Attributes
 
-Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  You can add an attribute only by running the following at the command line:
-
-```
-npm run add --objtk:attribute=<component>.css
-```
-
-The attribute will be added by creating the requisite CSS file in the `resources/assets/attributes` directory.
-
-Some attributes are very simple:
+Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  Some attributes are very simple:
 
 ```scss
 .title {
