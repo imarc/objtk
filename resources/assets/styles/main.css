@@ -7,6 +7,4 @@
 @import './layouts/**/*.css';
 @import './attributes/**/*.css';
 
-body {
-    font-size: 1.6rem;
-}
+@import './styles.css';
