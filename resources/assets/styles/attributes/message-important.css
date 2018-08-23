@@ -1,4 +1,4 @@
 .message.important {
-	color: var(--color-alt) !important;
-	background-color: var(--background-color-alt);
+	color: var(--background-color) !important;
+	background-color: var(--color);
 }
