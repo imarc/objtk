@@ -1,4 +1,4 @@
 .message.important {
-	color: var(--background-color) !important;
+	color: #ffffff;
 	background-color: var(--color);
 }

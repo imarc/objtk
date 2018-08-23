@@ -1,8 +1,11 @@
 @import './_mixins/**/*.css';
 
 @import './reset.css';
-@import './root.css';
-
 @import './themes/**/*.css';
 @import './layouts/**/*.css';
 @import './attributes/**/*.css';
+
+:root {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+}

@@ -1,0 +1,27 @@
+:root {
+    --black: #000000;
+    --blue: #4d7498;
+    --light-grey: #bbbbbb;
+    --dark-grey: #444444;
+    --grey: #808080;
+    --green: #7ab677;
+    --orange: #e4b03c;
+    --white: #ffffff;
+    --red: #c44d4f;
+
+    --background-color: #ffffff;
+    --color: #222222;
+    --padding: 2rem;
+    --border-size: 1px;
+    --border-color: currentColor;
+
+	--font-size: 10px;
+	--font-family: sans-serif;
+
+    --page-width-max: 1440px;
+    --page-padding-min: 2rem;
+
+	@media (--screen-large) {
+		--font-size: 12px;
+	}
+}
