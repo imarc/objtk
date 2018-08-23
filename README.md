@@ -1,6 +1,6 @@
 # ObjTK
 
-ObjTK (Object Tool-Kit) is an Object Oriented CSS and JS Behavior Library which uses Webkit, PostCSS, and Babel to provide a modern front-end framework that adheres to best practices.  ObjTK uses Astrum to provide a deliverable pattern library and styleguide.
+ObjTK (Object Tool-Kit) is an Object Oriented CSS and JS Behavior Library which uses Webpack, PostCSS, and Babel to provide a modern front-end starter that adheres to best practices.  ObjTK uses Astrum to provide a deliverable pattern library and styleguide.
 
 ## Installing and Running
 
