@@ -120,7 +120,7 @@ Attributes define those properties of a component which constitute its stylistic
 If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
 File: `resources/styles/assets/attribute/item.sss`
-```scss
+```css
 .item
 	padding: 2rem
 
