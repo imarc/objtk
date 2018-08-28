@@ -37,7 +37,7 @@ npm run serve
 ### Add a Mixin
 
 ```
-npm run add --objtk:mixin=<component>.sss
+npm run add --objtk:mixin=<component>.<ext>
 ```
 
 ## Object Oriented CSS
@@ -74,7 +74,7 @@ A component is a combination of HTML (Structure) and one or more CSS fragments (
 To create a new component, run:
 
 ```
-npm run make --objtk:component=<section>/<component>.sss
+npm run make --objtk:component=<section>/<component>.<ext>
 ```
 
 The above command will create a new component in the Astrum Pattern Library, as well as create CSS placeholder files for the component's attributes and layouts (but not themes).
@@ -112,23 +112,20 @@ Structures will be created in the pattern library under `public/patterns/compone
 
 Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  Some attributes are very simple:
 
-```scss
-.title {
-	font-size: 2rem;
-}
+```sss
+.title
+	font-size: 2rem
 ```
 
 If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
 File: `resources/styles/assets/attribute/item.sss`
-```scss
-.item {
-	padding: 2rem;
+```sss
+.item
+	padding: 2rem
 
-	& .title {
-		color: var(--red);
-	}
-}
+	& .title
+		color: var(--red)
 ```
 
 Although the `title` constitutes a separate component, when nested in a parent component, it is the parent component's attributes which determines those properties which _differ_ from the base-attribute.
@@ -159,7 +156,7 @@ Properties which are invalid on an attribute concern themselves with the placeme
 Attributes will be created automatically when you create a component, however, if you need to add a new attribute for a component that was modified or manually adde, you can run:
 
 ```
-npm run add --objtk:attribute=<component>.sss
+npm run add --objtk:attribute=<component>.<ext>
 ```
 
 ##### Layouts
@@ -167,21 +164,18 @@ npm run add --objtk:attribute=<component>.sss
 While attributes constitute the veneer of a component, layouts separate out the placement of a component's child elements or structures with respect to one another.  Layouts are defined separately from attributes such that one can easily change the layout of a component without affecting the overall style.
 
 File: `resources/styles/assets/layouts/title.sss`
-```scss
-.title {
-	margin-bottom: 1em;
-}
+```sss
+.title
+	margin-bottom: 1em
 ```
 
 Just as with attributes, a parent can overload its child's layout:
 
 File: `resources/styles/assets/layouts/item.sss`
-```scss
-.item {
-	& .title {
-		margin-bottom: 2em;
-	}
-}
+```sss
+.item
+	& .title
+		margin-bottom: 2em
 ```
 
 ###### Creating a Layout
@@ -189,7 +183,7 @@ File: `resources/styles/assets/layouts/item.sss`
 Layouts will be created automatically when you create a component, however, if you need to add a new layout for a component that was modified or manually added, you can run:
 
 ```
-npm run add --objtk:layout=<component>.sss
+npm run add --objtk:layout=<component>.<ext>
 ```
 
 ##### Themes
@@ -198,19 +192,17 @@ Themes are designed to allow things like colors or sizes to be easily adjusted. 
 
 So, for example, if your attributes contains:
 
-```scss
-.title {
-	color: var(--color);
-}
+```sss
+.title
+	color: var(--color)
 ```
 
 You might have:
 
 File: `resources/assets/styles/themes/title.sss`:
-```scss
-.title {
-	--color: var(--red);
-}
+```sss
+.title
+	--color: var(--red)
 ```
 
 ###### Creating a Theme
@@ -218,7 +210,7 @@ File: `resources/assets/styles/themes/title.sss`:
 Themes are not required as attributes should only use variables defined in the `_base.sss` file and will inherit values from the `:root` element, however if you need to create a theme you can run:
 
 ```
-npm run add --objtk:theme=<component>.sss
+npm run add --objtk:theme=<component>.<ext>
 ```
 
 #### Abstraction and Polymorphism
@@ -244,31 +236,28 @@ This allows us to take advantage of CSS specificity as it was intended to be use
 Our base component establishes the default properties and values, using variables where it makes sense.  Note, this is an attribute fragment:
 
 File: `resources/assets/styles/attributes/message.sss`
-```scss
-.message {
-	padding: var(--padding);
-	border: solid var(--border) var(--border-color);
-	color: var(--color);
-}
+```sss
+.message
+	padding: var(--padding)
+	border: solid var(--border) var(--border-color)
+	color: var(--color)
 ```
 
 The modifier `important` makes our color a background color and overloads the text so it is white.  Note, that this is an attribute fragment.
 
 File: `resources/assets/styles/attributes/message-important.sss`
-```scss
-.message.important {
-	color: #ffffff;
-	background-color: var(--color);
-}
+```sss
+.message.important
+	color: #ffffff
+	background-color: var(--color)
 ```
 
 The `error` modifier allows us to set what our color is on error messages.  Note, that this is a theme fragment, not an attribute.
 
 File: `resources/assets/styles/themes/message-error.sss`
-```scss
-.message.error {
-	--color: var(--red);
-}
+```sss
+.message.error
+	--color: var(--red)
 ```
 
 ##### Concerns
@@ -336,18 +325,13 @@ Note, that while these components will implicitly always have a structure, they 
 Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal`.  From there we use the above structure, then modify our attributes:
 
 File: `resources/assets/styles/attributes/modal.sss`
-```scss
-.modal {
-	& > .dialogue {
-		& > .content {
-			& > header {
-				& > .title {
-					font-weight: bold;
-				}
-			}
-		}
-	}
-}
+```sss
+.modal
+	& > .dialogue
+		& > .content
+			& > header
+				& > .title
+					font-weight: bold
 ```
 
 We did not need to first run `npm run make --objtk:component=headings/title` nor set the `font-weight: bold;` at the level of every title.  While this example may seem contrived it is merely used to demonstrate a point.  It is still _strongly suggested_ that sub-components be created first.  This not only helps to document the use of structures and create placeholders for their attributes/layouts, it also helps to keep your CSS smaller because in _most_ cases, subcomponents will have common properties which are only overloaded with such high specificity as above in unique circumstances.
