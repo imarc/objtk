@@ -7,9 +7,8 @@ module.exports = {
 	entry: entries,
 		module: {
 		rules: [
-			loaders.SSSLoader,
-			loaders.CSSLoader,
-			loaders.JSLoader
+			loaders.JSLoader,
+			loaders.CSSLoader
 		]
 	},
 	plugins: [

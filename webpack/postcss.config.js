@@ -1,6 +1,5 @@
 module.exports = {
   sourceMap: true,
-  parser: require('postcss-comment'),
   plugins: {
     'postcss-easy-import': {
         extensions: ['.css', '.sss']

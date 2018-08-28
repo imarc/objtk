@@ -40,22 +40,5 @@ module.exports = {
 				}
 			}
 		]
-	},
-
-	//
-	// SSSLoader
-	//
-
-	SSSLoader: {
-		test: /\.sss$/,
-		use: [
-			{
-				loader: 'postcss-loader',
-				options: {
-					sourceMap: true,
-					parser: 'subarss'
-				}
-			}
-		]
 	}
 };
