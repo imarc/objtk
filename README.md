@@ -112,7 +112,7 @@ Structures will be created in the pattern library under `public/patterns/compone
 
 Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  Some attributes are very simple:
 
-```scss
+```sass
 .title
 	font-size: 2rem
 ```
@@ -120,7 +120,7 @@ Attributes define those properties of a component which constitute its stylistic
 If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
 File: `resources/styles/assets/attribute/item.sss`
-```css
+```sass
 .item
 	padding: 2rem
 
