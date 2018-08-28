@@ -22,7 +22,7 @@ module.exports = {
 	//
 
 	CSSLoader: {
-		test: /\.css$/,
+		test: /\.css$|\.sss$/,
 		use: [
 			require("mini-css-extract-plugin").loader,
 			{
@@ -49,19 +49,11 @@ module.exports = {
 	SSSLoader: {
 		test: /\.sss$/,
 		use: [
-			require("mini-css-extract-plugin").loader,
-			{
-				loader: 'css-loader',
-				options: {
-					importLoaders: 1
-				},
-			},
 			{
 				loader: 'postcss-loader',
 				options: {
-					config: {
-						path: __dirname + '/postcss.sss.config.js'
-					}
+					sourceMap: true,
+					parser: 'subarss'
 				}
 			}
 		]

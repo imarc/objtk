@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   sourceMap: true,
   parser: require('postcss-comment'),
