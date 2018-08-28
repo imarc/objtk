@@ -1,7 +1,0 @@
-.action {
-    padding: calc(var(--padding) / 2) var(--padding);
-    background-color: var(--background-color-action);
-    color: var(--color-action);
-    cursor: pointer;
-    text-align: center;
-}

@@ -37,7 +37,7 @@ npm run serve
 ### Add a Mixin
 
 ```
-npm run add --objtk:mixin=<component>.css
+npm run add --objtk:mixin=<component>.sss
 ```
 
 ## Object Oriented CSS
@@ -74,7 +74,7 @@ A component is a combination of HTML (Structure) and one or more CSS fragments (
 To create a new component, run:
 
 ```
-npm run make --objtk:component=<section>/<component>
+npm run make --objtk:component=<section>/<component>.sss
 ```
 
 The above command will create a new component in the Astrum Pattern Library, as well as create CSS placeholder files for the component's attributes and layouts (but not themes).
@@ -120,7 +120,7 @@ Attributes define those properties of a component which constitute its stylistic
 
 If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
-File: `resources/styles/assets/attribute/item.css`
+File: `resources/styles/assets/attribute/item.sss`
 ```scss
 .item {
 	padding: 2rem;
@@ -159,14 +159,14 @@ Properties which are invalid on an attribute concern themselves with the placeme
 Attributes will be created automatically when you create a component, however, if you need to add a new attribute for a component that was modified or manually adde, you can run:
 
 ```
-npm run add --objtk:attribute=<component>.css
+npm run add --objtk:attribute=<component>.sss
 ```
 
 ##### Layouts
 
 While attributes constitute the veneer of a component, layouts separate out the placement of a component's child elements or structures with respect to one another.  Layouts are defined separately from attributes such that one can easily change the layout of a component without affecting the overall style.
 
-File: `resources/styles/assets/layouts/title.css`
+File: `resources/styles/assets/layouts/title.sss`
 ```scss
 .title {
 	margin-bottom: 1em;
@@ -175,7 +175,7 @@ File: `resources/styles/assets/layouts/title.css`
 
 Just as with attributes, a parent can overload its child's layout:
 
-File: `resources/styles/assets/layouts/item.css`
+File: `resources/styles/assets/layouts/item.sss`
 ```scss
 .item {
 	& .title {
@@ -189,7 +189,7 @@ File: `resources/styles/assets/layouts/item.css`
 Layouts will be created automatically when you create a component, however, if you need to add a new layout for a component that was modified or manually added, you can run:
 
 ```
-npm run add --objtk:layout=<component>.css
+npm run add --objtk:layout=<component>.sss
 ```
 
 ##### Themes
@@ -206,7 +206,7 @@ So, for example, if your attributes contains:
 
 You might have:
 
-File: `resources/assets/styles/themes/title.css`:
+File: `resources/assets/styles/themes/title.sss`:
 ```scss
 .title {
 	--color: var(--red);
@@ -215,10 +215,10 @@ File: `resources/assets/styles/themes/title.css`:
 
 ###### Creating a Theme
 
-Themes are not required as attributes should only use variables defined in the `_base.css` file and will inherit values from the `:root` element, however if you need to create a theme you can run:
+Themes are not required as attributes should only use variables defined in the `_base.sss` file and will inherit values from the `:root` element, however if you need to create a theme you can run:
 
 ```
-npm run add --objtk:theme=<component>.css
+npm run add --objtk:theme=<component>.sss
 ```
 
 #### Abstraction and Polymorphism
@@ -243,7 +243,7 @@ This allows us to take advantage of CSS specificity as it was intended to be use
 
 Our base component establishes the default properties and values, using variables where it makes sense.  Note, this is an attribute fragment:
 
-File: `resources/assets/styles/attributes/message.css`
+File: `resources/assets/styles/attributes/message.sss`
 ```scss
 .message {
 	padding: var(--padding);
@@ -254,7 +254,7 @@ File: `resources/assets/styles/attributes/message.css`
 
 The modifier `important` makes our color a background color and overloads the text so it is white.  Note, that this is an attribute fragment.
 
-File: `resources/assets/styles/attributes/message-important.css`
+File: `resources/assets/styles/attributes/message-important.sss`
 ```scss
 .message.important {
 	color: #ffffff;
@@ -264,7 +264,7 @@ File: `resources/assets/styles/attributes/message-important.css`
 
 The `error` modifier allows us to set what our color is on error messages.  Note, that this is a theme fragment, not an attribute.
 
-File: `resources/assets/styles/themes/message-error.css`
+File: `resources/assets/styles/themes/message-error.sss`
 ```scss
 .message.error {
 	--color: var(--red);
@@ -335,7 +335,7 @@ Note, that while these components will implicitly always have a structure, they 
 
 Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal`.  From there we use the above structure, then modify our attributes:
 
-File: `resources/assets/styles/attributes/modal.css`
+File: `resources/assets/styles/attributes/modal.sss`
 ```scss
 .modal {
 	& > .dialogue {
