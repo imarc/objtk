@@ -112,7 +112,7 @@ Structures will be created in the pattern library under `public/patterns/compone
 
 Attributes define those properties of a component which constitute its stylistic aspects, not those which are unrelated to the placement or layout of elements or sub-components within the component.  Some attributes are very simple:
 
-```sss
+```scss
 .title
 	font-size: 2rem
 ```
@@ -120,7 +120,7 @@ Attributes define those properties of a component which constitute its stylistic
 If a component has a structure which consists of other structures, the attributes for that component define the overloaded properties of its sub-components.  See the `& .title` overload below:
 
 File: `resources/styles/assets/attribute/item.sss`
-```sss
+```scss
 .item
 	padding: 2rem
 
@@ -164,7 +164,7 @@ npm run add --objtk:attribute=<component>.<ext>
 While attributes constitute the veneer of a component, layouts separate out the placement of a component's child elements or structures with respect to one another.  Layouts are defined separately from attributes such that one can easily change the layout of a component without affecting the overall style.
 
 File: `resources/styles/assets/layouts/title.sss`
-```sss
+```scss
 .title
 	margin-bottom: 1em
 ```
@@ -172,7 +172,7 @@ File: `resources/styles/assets/layouts/title.sss`
 Just as with attributes, a parent can overload its child's layout:
 
 File: `resources/styles/assets/layouts/item.sss`
-```sss
+```scss
 .item
 	& .title
 		margin-bottom: 2em
@@ -192,7 +192,7 @@ Themes are designed to allow things like colors or sizes to be easily adjusted. 
 
 So, for example, if your attributes contains:
 
-```sss
+```scss
 .title
 	color: var(--color)
 ```
@@ -200,7 +200,7 @@ So, for example, if your attributes contains:
 You might have:
 
 File: `resources/assets/styles/themes/title.sss`:
-```sss
+```scss
 .title
 	--color: var(--red)
 ```
@@ -236,7 +236,7 @@ This allows us to take advantage of CSS specificity as it was intended to be use
 Our base component establishes the default properties and values, using variables where it makes sense.  Note, this is an attribute fragment:
 
 File: `resources/assets/styles/attributes/message.sss`
-```sss
+```scss
 .message
 	padding: var(--padding)
 	border: solid var(--border) var(--border-color)
@@ -246,7 +246,7 @@ File: `resources/assets/styles/attributes/message.sss`
 The modifier `important` makes our color a background color and overloads the text so it is white.  Note, that this is an attribute fragment.
 
 File: `resources/assets/styles/attributes/message-important.sss`
-```sss
+```scss
 .message.important
 	color: #ffffff
 	background-color: var(--color)
@@ -255,7 +255,7 @@ File: `resources/assets/styles/attributes/message-important.sss`
 The `error` modifier allows us to set what our color is on error messages.  Note, that this is a theme fragment, not an attribute.
 
 File: `resources/assets/styles/themes/message-error.sss`
-```sss
+```scss
 .message.error
 	--color: var(--red)
 ```
@@ -325,7 +325,7 @@ Note, that while these components will implicitly always have a structure, they 
 Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal`.  From there we use the above structure, then modify our attributes:
 
 File: `resources/assets/styles/attributes/modal.sss`
-```sss
+```scss
 .modal
 	& > .dialogue
 		& > .content
