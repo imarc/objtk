@@ -164,7 +164,7 @@ npm run add --objtk:attribute=<component>.<ext>
 While attributes constitute the veneer of a component, layouts separate out the placement of a component's child elements or structures with respect to one another.  Layouts are defined separately from attributes such that one can easily change the layout of a component without affecting the overall style.
 
 File: `resources/styles/assets/layouts/title.sss`
-```scss
+```sass
 .title
 	margin-bottom: 1em
 ```
@@ -172,7 +172,7 @@ File: `resources/styles/assets/layouts/title.sss`
 Just as with attributes, a parent can overload its child's layout:
 
 File: `resources/styles/assets/layouts/item.sss`
-```scss
+```sass
 .item
 	& .title
 		margin-bottom: 2em
@@ -192,7 +192,7 @@ Themes are designed to allow things like colors or sizes to be easily adjusted. 
 
 So, for example, if your attributes contains:
 
-```scss
+```sass
 .title
 	color: var(--color)
 ```
@@ -200,7 +200,7 @@ So, for example, if your attributes contains:
 You might have:
 
 File: `resources/assets/styles/themes/title.sss`:
-```scss
+```sass
 .title
 	--color: var(--red)
 ```
@@ -236,7 +236,7 @@ This allows us to take advantage of CSS specificity as it was intended to be use
 Our base component establishes the default properties and values, using variables where it makes sense.  Note, this is an attribute fragment:
 
 File: `resources/assets/styles/attributes/message.sss`
-```scss
+```sass
 .message
 	padding: var(--padding)
 	border: solid var(--border) var(--border-color)
@@ -246,7 +246,7 @@ File: `resources/assets/styles/attributes/message.sss`
 The modifier `important` makes our color a background color and overloads the text so it is white.  Note, that this is an attribute fragment.
 
 File: `resources/assets/styles/attributes/message-important.sss`
-```scss
+```sass
 .message.important
 	color: #ffffff
 	background-color: var(--color)
@@ -255,7 +255,7 @@ File: `resources/assets/styles/attributes/message-important.sss`
 The `error` modifier allows us to set what our color is on error messages.  Note, that this is a theme fragment, not an attribute.
 
 File: `resources/assets/styles/themes/message-error.sss`
-```scss
+```sass
 .message.error
 	--color: var(--red)
 ```
@@ -325,7 +325,7 @@ Note, that while these components will implicitly always have a structure, they 
 Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal`.  From there we use the above structure, then modify our attributes:
 
 File: `resources/assets/styles/attributes/modal.sss`
-```scss
+```sass
 .modal
 	& > .dialogue
 		& > .content
