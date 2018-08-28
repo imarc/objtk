@@ -322,7 +322,7 @@ Each class in the ObjTK example constitutes its own separate component.  That is
 
 Note, that while these components will implicitly always have a structure, they do not need to have any attributes or layouts defined.  It is completely possible to work on a complex object without having to figure out every detail of its encapsulate objects beforehand.  Properties which begin to demonstrate themselves as common to the encapsulated objects can then be moved ot refactored later (making CSS smaller, not larger).
 
-Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal`.  From there we use the above structure, then modify our attributes:
+Assuming, for example, that we had no components defined it is completely possible to simply run `npm run make --objtk:component=ui/modal.sss`.  From there we use the above structure, then modify our attributes:
 
 File: `resources/assets/styles/attributes/modal.sss`
 ```sass
@@ -334,4 +334,4 @@ File: `resources/assets/styles/attributes/modal.sss`
 					font-weight: bold
 ```
 
-We did not need to first run `npm run make --objtk:component=headings/title` nor set the `font-weight: bold;` at the level of every title.  While this example may seem contrived it is merely used to demonstrate a point.  It is still _strongly suggested_ that sub-components be created first.  This not only helps to document the use of structures and create placeholders for their attributes/layouts, it also helps to keep your CSS smaller because in _most_ cases, subcomponents will have common properties which are only overloaded with such high specificity as above in unique circumstances.
+We did not need to first run `npm run make --objtk:component=headings/title.sss` nor set the `font-weight: bold;` at the level of every title.  While this example may seem contrived it is merely used to demonstrate a point.  It is still _strongly suggested_ that sub-components be created first.  This not only helps to document the use of structures and create placeholders for their attributes/layouts, it also helps to keep your CSS smaller because in _most_ cases, subcomponents will have common properties which are only overloaded with such high specificity as above in unique circumstances.
