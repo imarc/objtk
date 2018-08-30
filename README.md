@@ -6,7 +6,7 @@ ObjTK (Object Tool-Kit) is an Object Oriented CSS and JS Behavior Library which 
 
 ### Install
 
-We recommend using `yarn` because it's way faster and doesn't suck as much as npm.
+We recommend using `yarn`.
 
 ```
 yarn install
