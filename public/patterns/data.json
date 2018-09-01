@@ -142,6 +142,17 @@
                     "title": "Choice"
                 }
             ]
+        },
+        {
+            "name": "articles",
+            "title": "Articles",
+            "components": [
+                {
+                    "group": "articles",
+                    "name": "article-technical.sss",
+                    "title": "Technical Article"
+                }
+            ]
         }
     ],
     "version": "1.9.5"

@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<title>Sample Page</title>
+		<link type="text/css" rel="stylesheet" href="/styles/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" integrity="sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs=" crossorigin="anonymous" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk=" crossorigin="anonymous"></script>
+		<style>
+			:root {
+				--page-width-max: 1024px;
+				--font-size: 1.8rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+
+		</header>
+		<main>
+			<article class="-technical">
+				<h1>Sample Page</h1>
+				<p>
+					This is a sample page which is designed to demonstrate basic HTML element support within ObjTK.  Additionally, it covers some of the principles employed while developing ObjTK and why they were chosen.  This page should look nice and not broken.  If you modify ObjTK, you can come back to this page as a simple test.  You might also wish to checkout the <a href="/sample-layout.html">sample layout page</a> which demonstrates high level layout support.
+				</p>
+
+				<section>
+					<h1>Headings</h1>
+					<p>
+						There are two types of headings supported in ObjTK, however, they might not do what you expect.  Read on to find out more.
+					</p>
+					<ul>
+						<li>Classic Headings</li>
+						<li>Structural Headings</li>
+					</ul>
+
+					<section>
+						<h1>Classic Headings</h1>
+						<p>
+							Classic headings use the <code>h1</code> through <code>h6</code> tags.  Historically, these were used almost exclusively to determine the style of the heading.  With the advent of HTML5 and the introduction of the <code>section</code> tag, it is now possible to actually structure a document semantically.  As such, we suggest you use and, by default, style <code>h1</code> through <code>h6</code> differently than what you might be used to.
+						</p>
+						<p>
+							Instead of using the <code>h2</code> as simply a different style, use it to follow an <code>h1</code> within the same parent element, indicating it as a secondary title for the same section (not a primary title for a secondary section).
+						</p>
+						<script type="html">
+							<header>
+								<h1 class="title">I Think I Just Hit a Deer</h1>
+								<h2 class="title -sub">The Story of How I Met Your Mother</h2>
+							</header>
+						</script>
+					</section>
+
+					<section>
+						<h1>Structural Headings</h1>
+						<p>
+							Structural headings, in contrast, use only <code>h1</code> elements, but are nested in sub-sections.  For example:
+						</p>
+						<script type="html">
+							<h1>Section</h1>
+							<p>...</p>
+							<section>
+								<h1>Sub-Section</h1>
+								<p>...</p>
+							</section>
+						</script>
+						<p>
+							These headings are styled more like how you might expect classic headings to be styled, and depend on your data structure.  This approach indicates that it is the primary heading for the current section and frees up the subsequent <code>h2</code> htorugh <code>h6</code> tags to semantically define alternative headings.
+						</p>
+					</section>
+
+					<section>
+						<h1>Block Content</h1>
+						<p>
+							Block content includes things like paragraphs, lists, block quotes, code blocks, etc.  This section will explain the default styling on some of these and why we made the decisions we did.  Block content will only have bottom margin except in the case of some specific nesting behavior such a lists.
+						</p>
+						<section>
+							<h1>Paragraphs</h1>
+							<p>
+								What can we say? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta tempore molestias inventore cum est assumenda tenetur iste totam. Consequatur recusandae dolore aperiam quos laboriosam eligendi maiores officiis tempore inventore excepturi.
+							</p>
+						</section>
+						<section>
+							<h1>Lists</h1>
+							<p>
+								The only lists we'll ever style for you are lists without a class.  Literally, this is what we do:
+							</p>
+							<script type="scss">
+								ul, ol
+									list-style: none
+
+									&:not([class]), &:not([class])
+
+										//
+										// For magic default bullet styles, you will want to modify the mixin,
+										// although if you are only looking to change a few things, you might
+										// want to check out the _base.sss theme first, you can control color
+										// and character there.
+										//
+
+										@mixin bullets
+							</script>
+							<p>
+								The mixin uses the <code>::before</code> pseudo-element in order to display and control bullet content which is a fairly common practice.  However, because this often breaks expectations, particularly when someone is trying to figure out why they can't get bullets to disappear with list-style, we explicitly only style non-classed lists in this manner.  If you want other lists with classes to be styled as such, we suggest including the mixin.
+							</p>
+							<p>
+								A few of our goals when creating lists include:
+							</p>
+							<ul>
+								<li>Ensuring consistent bullet sizes and meticulous placement</li>
+								<li>
+									<p>
+										Making sure that lists do not break when a list item contains another piece of block content.
+									</p>
+									<p>
+										<em>Yes!</em> This means your list item can have mulitple paragraphs and they won't break.  It can also contain other lists (as you'd probably expect).
+									</p>
+								</li>
+								<li>
+									<p>
+										Making it easy to adjust bullet style without having to think about the <code>::before</code> aspect by...
+									</p>
+									<ul>
+										<li>Exposing variables in the theme</li>
+										<li>Using cascade (You style nested <code>li</code> tags, not <code>::before</code>)</li>
+									</ul>
+								</li>
+							</ul>
+						</section>
+					</section>
+				</section>
+			</article>
+		</main>
+		<!--
+		<section class="internal">
+			<nav>
+				<h1>Nav</h1>
+			</nav>
+			<main>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maxime nemo et quas provident quis autem, impedit veritatis. Animi, dolorem. Unde esse eligendi ab, aliquam error laborum culpa est dolor.
+				</p>
+			</main>
+		</section>
+		-->
+		<footer>
+
+		</footer>
+		<script type="text/javascript">
+			hljs.configure({
+				languages: []
+			});
+
+			document.querySelectorAll('script[type]:not([type*="/"])').forEach(function(e) {
+				let c = document.createElement('code'),
+					p = document.createElement('pre');
+
+				c.innerText = e.innerText.split(e.innerText.match(/^\s*/)[0]).join('\n').trim();
+
+				c.classList.add(e.getAttribute('type'));
+				e.parentNode.replaceChild(p, e);
+				p.appendChild(c);
+			});
+
+			hljs.initHighlighting();
+		</script>
+	</body>
+</html>

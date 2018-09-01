@@ -1,9 +1,9 @@
 :root
 	font-family: var(--font-family)
-	font-size: var(--font-size)
+	font-size: var(--root-size, 10px)
 
 body
-	font-size: 1.6rem
+	font-size: var(--font-size)
 	line-height: 1.5em
 
 a
@@ -14,3 +14,61 @@ a
 	&:active
 		color: var(--color)
 		text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1em
+	font-weight: bold
+
+h1
+	font-size: calc(var(--font-size) * 3.5)
+
+	@nest section &
+		font-size: calc(var(--font-size) * 3.0)
+
+		@nest section &
+			font-size: calc(var(--font-size) * 2.5)
+
+			@nest section &
+				font-size: calc(var(--font-size) * 2.0)
+
+				@nest section &
+					font-size: calc(var(--font-size) * 1.5)
+
+					@nest section &
+						font-size: calc(var(--font-size) * 1.0)
+
+h2
+	font-size: calc(var(--font-size) * 3.0)
+
+h3
+	font-size: calc(var(--font-size) * 2.5)
+
+h4
+	font-size: calc(var(--font-size) * 2.0)
+
+h5
+	font-size: calc(var(--font-size) * 1.5)
+
+h6
+	font-size: calc(var(--font-size) * 1.0)
+
+pre
+	padding: 0
+
+	& code
+		padding: 1rem 2rem !important
+		border-left: solid 10px var(--border-color)
+		border-right: solid 10px var(--border-color)
+
+ul, ol
+	list-style: none
+
+	&:not([class]), &:not([class])
+
+		//
+		// For magic default bullet styles, yo uwill want to modify the mixin, although if you
+		// are only looking to change a few things, you might want to check out the _base.sss
+		// theme first, you can control color and character there.
+		//
+
+		@mixin bullets

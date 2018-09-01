@@ -15,14 +15,14 @@
 	--border-size: 1px
 	--border-color: currentColor
 
-	--font-size: 10px
+	--font-size: 1.6rem
 	--font-family: sans-serif
 
 	--page-width-max: 1440px
 	--page-padding-min: 2rem
 
 	@media (--screen-large)
-		--font-size: 12px
+		--font-size: 20px
 
 a
 	&:link,
@@ -30,5 +30,16 @@ a
 	&:hover,
 	&:focus,
 	&:active
-
 		--color: var(--red)
+
+pre
+	& code
+		--border-color: var(--green)
+
+ul, ol
+	& li
+		--bullet: "\25CF"
+		--bullet-color: var(--red)
+
+		& li
+			--bullet: "\25FE"

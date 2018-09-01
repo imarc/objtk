@@ -2,15 +2,24 @@
 @custom-media --screen-desktop screen and (min-width: 1280px)
 @custom-media --screen-large screen and (min-width: 1584px)
 
-body > header,
-body > footer,
-body > section:not(.internal)
+main
+	max-width: none
+	padding: 0
+
 	& > :not(.billboard)
 		@mixin container
 
-body > section.internal
-	@mixin container
+h1
+	margin-top: calc(var(--font-size) * 2)
+	margin-bottom: var(--font-size)
 
-	@media (--screen-large)
-		display: grid
-		grid-template-columns: 30% auto
+p, ul, ol, blockquote, section, pre
+	margin-bottom: var(--font-size)
+
+section
+	@nest body > &
+		@mixin container
+
+		@media (--screen-large)
+			display: grid
+			grid-template-columns: 30% auto
