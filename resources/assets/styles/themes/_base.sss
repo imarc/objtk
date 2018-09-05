@@ -1,13 +1,16 @@
 :root
 	--black: #000000
 	--blue: #4d7498
-	--lighter-grey: #d6d6d6
 	--light-grey: #b0b0b0
+	--lighter-grey: #d6d6d6
+	--lightest-grey: #e0e0e0
 	--dark-grey: #606060
 	--darker-grey: #363636
+	--darkest-grey: #202020
 	--grey: #808080
 	--green: #7ab677
 	--orange: #e4b03c
+	--yellow: #fffcd9
 	--white: #ffffff
 	--red: #c44d4f
 
@@ -35,8 +38,21 @@ a
 	&:active
 		--color: var(--red)
 
+figcaption
+	--background-color: var(--lightest-grey)
+
 cite
 	color: var(--red)
+
+code
+	--background-color: var(--lighter-grey)
+
+var
+	--background-color: inherit
+	--color: var(--darker-grey)
+
+mark
+	--background-color: var(--yellow)
 
 pre
 	& code
