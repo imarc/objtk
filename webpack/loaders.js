@@ -40,5 +40,16 @@ module.exports = {
 				}
 			}
 		]
-	}
+	},
+
+
+    //
+    // HTML Loader
+    //
+
+    HTMLLoader: {
+        test: /\.html$/,
+        loader: 'html-loader',
+        exclude: "/node_modules/"
+    }
 };

@@ -8,9 +8,15 @@ module.exports = {
 		module: {
 		rules: [
 			loaders.JSLoader,
-			loaders.CSSLoader
+			loaders.CSSLoader,
+            loaders.HTMLLoader
 		]
 	},
+    resolve: {
+        alias: {
+            "vue$": "vue/dist/vue.esm.js"
+        }
+    },
 	plugins: [
 		plugins.MiniCSS
 	],
