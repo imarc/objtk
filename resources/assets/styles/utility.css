@@ -19,6 +19,14 @@
 	@mixin row;
 }
 
+.button {
+	@mixin button;
+}
+
+.-full {
+	@mixin -full;
+}
+
 .-split-2 {
 	@mixin -split-2;
 }
@@ -35,10 +43,14 @@
 	@mixin -padded;
 }
 
-.button {
-	@mixin button;
+.-solid {
+	@mixin -solid;
 }
 
-.-suggested {
-	@mixin -suggested;
+.-invert {
+	@mixin -invert;
+}
+
+.-outline {
+	@mixin -outline;
 }
