@@ -39,8 +39,8 @@
 	@mixin -split-4;
 }
 
-.-padded {
-	@mixin -padded;
+.-pad {
+	@mixin -pad;
 }
 
 .-solid {
@@ -56,5 +56,5 @@
 }
 
 .-round {
-	@mixin -round; 
+	@mixin -round;
 }
