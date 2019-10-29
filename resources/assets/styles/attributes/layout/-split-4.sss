@@ -1,2 +1,17 @@
 @define-mixin -split-4
-	width: 25%
+	@media (--screen-tablet)
+		& > *
+			--split: 2
+
+			&:nth-child(2n+1)
+				margin-left: 0
+
+	@media (--screen-desktop)
+		& > *
+			--split: 4
+
+			&:nth-child(2n+1)
+				margin-left: var(--gutter)
+
+			&:nth-child(4n+1)
+				margin-left: 0

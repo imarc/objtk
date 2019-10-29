@@ -1,4 +1,17 @@
 @define-mixin row
-	@media (--screen-desktop)
+
+	& > *
+		margin-bottom: var(--gutter)
+
+
+	@media (--screen-tablet)
 		display: flex
 		flex-direction: row
+		flex-wrap: wrap
+
+		& > *
+			margin-left: var(--gutter)
+			width: calc((100% - (var(--gutter) * (var(--split) - 1))) / var(--split))
+
+			&:first-child
+				margin-left: 0
