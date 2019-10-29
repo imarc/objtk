@@ -54,3 +54,7 @@
 .-outline {
 	@mixin -outline;
 }
+
+.-round {
+	@mixin -round; 
+}
