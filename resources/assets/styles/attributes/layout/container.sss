@@ -1,9 +1,9 @@
 @define-mixin container
 	margin: 0
-	padding: var(--padding-page-min)
+	padding: var(--padding)
 
 	@media (--screen-desktop)
-		padding: calc(var(--padding-page-min) * 2) 10%
+		padding: calc(var(--padding) * 2) 10%
 
 	@media (--screen-large)
-		padding: calc(var(--padding-page-min) * 4) calc((100% - var(--width-max)) / 2)
+		padding: calc(var(--padding) * 4) calc((100% - var(--width-max)) / 2)
