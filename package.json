@@ -1,14 +1,14 @@
 {
   "name": "objtk",
   "devDependencies": {
-    "astrum": "^1.9.5",
+    "@frctl/fractal": "^1.2.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "html-loader": "^0.5.5",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.6",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
+    "html-loader": "^0.5.5",
     "marx-css": "^3.0.3",
     "mime": "^2.3.1",
     "mini-css-extract-plugin": "^0.4.1",
@@ -23,11 +23,9 @@
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js -p --config ./webpack/webpack.config.js --display-error-details",
-    "watch": "./node_modules/webpack/bin/webpack.js -d --watch --config ./webpack/webpack.config.js --display-error-details",
-    "serve": "./node_modules/webpack/bin/webpack.js -d --watch --config ./webpack/webpack.config.js",
-    "make": "./node_modules/astrum/manager/astrum.js new $npm_package_config_component; npm run add --objtk:attribute=`basename $npm_package_config_component` --objtk:layout=`basename $npm_package_config_component` --objtk:theme=`basename $npm_package_config_component`",
-    "add": "./node_modules/touch/bin/nodetouch.js ./resources/assets/styles/attributes/$npm_package_config_attribute ./resources/assets/styles/layouts/$npm_package_config_layout ./resources/assets/styles/themes/$npm_package_config_theme ./resources/assets/styles/_mixins/$npm_package_config_mixin ./resources/assets/styles/*"
+    "build": "./node_modules/webpack/bin/webpack.js -p --config ./webpack/webpack.config.js --display-error-details; ./node_modules/@frctl/fractal/bin/fractal build",
+    "watch": "./node_modules/webpack/bin/webpack.js -d --watch --config ./webpack/webpack.config.js",
+    "serve": "./node_modules/@frctl/fractal/bin/fractal start --sync"
   },
   "dependencies": {
     "vue": "^2.5.17"
