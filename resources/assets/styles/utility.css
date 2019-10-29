@@ -34,3 +34,11 @@
 .-padded {
 	@mixin -padded;
 }
+
+.button {
+	@mixin button;
+}
+
+.-suggested {
+	@mixin -suggested;
+}
