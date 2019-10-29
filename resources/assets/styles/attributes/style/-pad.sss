@@ -1,4 +1,2 @@
 @define-mixin -pad
-	padding: var(--padding)
-
-	--gutter: 0rem
+	padding: calc(var(--padding) / var(--padding-divisor)) var(--padding)

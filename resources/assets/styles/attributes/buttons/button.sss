@@ -1,8 +1,18 @@
 @define-mixin button
+	@mixin -pad
 	@mixin -solid
 
-	display: inline-block
-	padding: calc(var(--padding) / 2) var(--padding)
 	border: var(--style-border) var(--width-border) transparent
-	text-align: center
 	cursor: pointer
+	display: inline-block
+	text-align: center
+
+	--color: var(--button-color)
+	--color-background: var(--button-background-color)
+
+	--padding: var(--button-padding)
+	--padding-divisor: var(--button-padding-divisor)
+
+	--style-border: var(--button-border-style)
+	--color-border: var(--button-border-color)
+	--width-border: var(--button-border-width)
