@@ -1,50 +1,37 @@
 @define-mixin -split
+	justify-content: space-between
+	margin: 0
+
 	& > *
-		margin-left: var(--gutter, var(--padding-base))
-
-		&:first-child
-			margin-left: 0
-
-@define-mixin -split-x
-	@mixin -split
+		width: 100%
+		margin-left: 0
+		margin-right: 0
 
 	@media (--screen-any)
 		& > *
 			width: calc((100% - (var(--gutter, var(--padding-base)) * (var(--split, 1) - 1))) / var(--split, 1))
 
 @define-mixin -split-2
-	@mixin -split-x
+	@mixin -split
 
 	@media (--screen-any)
 		& > *
 			--split: 2
 
-			&:nth-child(2n+1)
-				margin-left: 0
-
 @define-mixin -split-3
-	@mixin -split-x
+	@mixin -split
 
 	@media (--screen-any)
 		& > *
 			--split: 3
 
-			&:nth-child(3n+1)
-				margin-left: 0
-
 @define-mixin -split-4
-	@mixin -split-x
+	@mixin -split
 
 	@media (--screen-tablet)
 		& > *
 			--split: 2
 
-			&:nth-child(2n+1)
-				margin-left: 0
-
 	@media (--screen-desktop)
 		& > *
 			--split: 4
-
-			&:nth-child(4n+1)
-				margin-left: 0

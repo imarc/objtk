@@ -18,8 +18,8 @@
 	@mixin container;
 }
 
-.row {
-	@mixin row;
+.grid {
+	@mixin grid;
 }
 
 .button {
