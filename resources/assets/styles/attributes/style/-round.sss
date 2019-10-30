@@ -1,14 +1,16 @@
 @define-mixin -round
-	border-radius: var(--border-radius)
+	border-radius: calc(var(--border-radius) * var(--border-radius-modifier))
 	overflow: hidden
 
 @define-mixin -round-less
-	border-radius: calc(var(--border-radius) / 2)
-	overflow: hidden
+	@mixin -round
+
+	--border-radius-modifier: .5
 
 @define-mixin -round-more
-	border-radius: calc(var(--border-radius) * 2)
-	overflow: hidden
+	@mixin -round
+
+	--border-radius-modifier: 2
 
 @define-mixin -round-full
 	@mixin -round
