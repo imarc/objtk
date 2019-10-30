@@ -1,2 +1,12 @@
 @define-mixin -grow
 	width: var(--width)
+
+@define-mixin -grow-full
+	@mixin -grow
+
+	--width: 100%
+
+@define-mixin -grow-half
+	@mixin -grow
+
+	--width: 50%

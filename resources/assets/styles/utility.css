@@ -11,7 +11,7 @@
 @import './components/**/*';
 
 /**************************************************************************************************/
-/* Utility Classes
+/* Components
 /**************************************************************************************************/
 
 .container {
@@ -26,16 +26,37 @@
 	@mixin button;
 }
 
-.-grow-full {
-	@mixin -grow-full;
+.square {
+	@mixin square;
 }
+
+
+/**************************************************************************************************/
+/* Layout
+/**************************************************************************************************/
 
 .-grow {
 	@mixin -grow;
 }
 
+.-grow-full {
+	@mixin -grow-full;
+}
+
+.-grow-half {
+	@mixin -grow-half;
+}
+
 .-pack {
 	@mixin -pack;
+}
+
+.-split {
+	@mixin -split;
+}
+
+.-split-x {
+	@mixin -split-x;
 }
 
 .-split-2 {
@@ -50,8 +71,44 @@
 	@mixin -split-4;
 }
 
+/**************************************************************************************************/
+/* Style
+/**************************************************************************************************/
+
+.-align {
+	@mixin -align;
+}
+
+.-align-center {
+	@mixin -align-center;
+}
+
+.-align-just {
+	@mixin -align-just;
+}
+
+.-align-left {
+	@mixin -align-left;
+}
+
+.-align-right {
+	@mixin -align-right;
+}
+
+.-color {
+	@mixin -color;
+}
+
+.-color-white {
+	@mixin -color-white;
+}
+
 .-fill {
-	@mixin -solid;
+	@mixin -fill;
+}
+
+.-fill-grey {
+	@mixin -fill-grey;
 }
 
 .-invert {
@@ -68,4 +125,8 @@
 
 .-round {
 	@mixin -round;
+}
+
+.-round-full {
+	@mixin -round-full;
 }
