@@ -4,21 +4,21 @@
 	& > *
 		width: 100%
 
-	@media (--screen-any)
+	@media (--screen-tablet)
 		& > *
 			width: calc(100% / var(--split, 1) - var(--gutter))
 
 @define-mixin -split-2
 	@mixin -split
 
-	@media (--screen-any)
+	@media (--screen-tablet)
 		& > *
 			--split: 2
 
 @define-mixin -split-3
 	@mixin -split
 
-	@media (--screen-any)
+	@media (--screen-tablet)
 		& > *
 			--split: 3
 

@@ -55,10 +55,6 @@
 	@mixin -split;
 }
 
-.-split-x {
-	@mixin -split-x;
-}
-
 .-split-2 {
 	@mixin -split-2;
 }
