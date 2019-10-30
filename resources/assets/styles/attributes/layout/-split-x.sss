@@ -1,6 +1,6 @@
 @define-mixin -split-x
 	@mixin -split
 
-	@media (--screen-tablet)
+	@media (--screen-any)
 		& > *
 			width: calc((100% - (var(--gutter, var(--padding-base)) * (var(--split, 1) - 1))) / var(--split, 1))
