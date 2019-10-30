@@ -1,15 +1,12 @@
 @define-mixin -split
 	justify-content: space-between
-	margin: 0
 
 	& > *
 		width: 100%
-		margin-left: 0
-		margin-right: 0
 
 	@media (--screen-any)
 		& > *
-			width: calc((100% - (var(--gutter, var(--padding-base)) * (var(--split, 1) - 1))) / var(--split, 1))
+			width: calc(100% / var(--split, 1) - var(--gutter))
 
 @define-mixin -split-2
 	@mixin -split

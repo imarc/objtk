@@ -1,10 +1,13 @@
 @define-mixin grid
 	--gutter: var(--grid-gutter)
+	--margin-bottom: var(--grid-margin-bottom, )
 
 	display: flex
 	flex-direction: row
 	flex-wrap: wrap
 	margin: calc(var(--gutter) / 2 * -1)
+	margin-bottom: calc(var(--margin-bottom) - var(--gutter) / 2)
+	overflow: hidden
 
 	& > *
 		margin: calc(var(--gutter) / 2)
