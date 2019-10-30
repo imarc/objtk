@@ -44,11 +44,7 @@
 	@mixin -split-4;
 }
 
-.-pad {
-	@mixin -pad;
-}
-
-.-solid {
+.-fill {
 	@mixin -solid;
 }
 
@@ -58,6 +54,10 @@
 
 .-outline {
 	@mixin -outline;
+}
+
+.-pad {
+	@mixin -pad;
 }
 
 .-round {
