@@ -1,0 +1,6 @@
+@define-mixin -split
+	& > *
+		margin-left: var(--gutter, var(--padding-base))
+
+		&:first-child
+			margin-left: 0
