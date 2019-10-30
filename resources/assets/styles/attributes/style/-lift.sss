@@ -1,0 +1,14 @@
+@define-mixin -lift
+	box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-width) var(--shadow-color)
+
+@define-mixin -lift-high
+	@mixin -lift
+
+	--shadow-width: 2px
+	--shadow-blur: 7px
+
+@define-mixin -lift-low
+	@mixin -lift
+
+	--shadow-width: 1px
+	--shadow-blur: 3px

@@ -115,6 +115,18 @@
 	@mixin -invert;
 }
 
+.-lift {
+	@mixin -lift;
+}
+
+.-lift-high {
+	@mixin -lift-high;
+}
+
+.-lift-low {
+	@mixin -lift-low;
+}
+
 .-outline {
 	@mixin -outline;
 }
