@@ -24,8 +24,12 @@
 	@mixin button;
 }
 
-.-full {
-	@mixin -full;
+.-grow-full {
+	@mixin -grow-full;
+}
+
+.-grow {
+	@mixin -grow;
 }
 
 .-pack {
