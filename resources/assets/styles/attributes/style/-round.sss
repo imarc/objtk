@@ -2,6 +2,14 @@
 	border-radius: var(--border-radius)
 	overflow: hidden
 
+@define-mixin -round-less
+	border-radius: calc(var(--border-radius) / 2)
+	overflow: hidden
+
+@define-mixin -round-more
+	border-radius: calc(var(--border-radius) * 2)
+	overflow: hidden
+
 @define-mixin -round-full
 	@mixin -round
 

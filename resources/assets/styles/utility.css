@@ -131,6 +131,10 @@
 	@mixin -outline;
 }
 
+.-outline-dotted {
+	@mixin -outline-dotted;
+}
+
 .-pad {
 	@mixin -pad;
 }
@@ -138,6 +142,15 @@
 .-round {
 	@mixin -round;
 }
+
+.-round-less {
+	@mixin -round-less;
+}
+
+.-round-more {
+	@mixin -round-more;
+}
+
 
 .-round-full {
 	@mixin -round-full;
