@@ -3,7 +3,9 @@
 /**************************************************************************************************/
 
 @import './_variables.sss';
+@import './_theme.sss';
 @import './_reset.sss';
+@import './_base.sss';
 
-@import './themes/default.sss';
 @import './attributes/**/*';
+@import './components/**/*';
