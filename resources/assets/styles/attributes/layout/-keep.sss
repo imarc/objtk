@@ -1,9 +1,10 @@
 @define-mixin -keep
-	width: 100%
+	flex-grow: 12
 
 	@media (--screen-tablet)
-		flex-basis: var(--columns)
-		min-width: var(--width-min, none)
+		flex-basis: calc(100% / 12 * var(--columns) - var(--gutter))
+		min-width: var(--width-min, unset)
+		max-width: var(--width-max, unset)
 		width: auto
 
 @define-mixin -keep-12
