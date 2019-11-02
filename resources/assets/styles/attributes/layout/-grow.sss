@@ -1,6 +1,9 @@
 @define-mixin -grow
 	width: var(--width)
 
+	@media (--screen-tablet)
+		flex-grow: var(--columns)
+
 @define-mixin -grow-full
 	@mixin -grow
 
@@ -10,3 +13,13 @@
 	@mixin -grow
 
 	--width: 50%
+
+@define-mixin -grow-third
+	@mixin -grow
+
+	--width: 33.3333%
+
+@define-mixin -grow-fourth
+	@mixin -grow
+
+	--width: 25%

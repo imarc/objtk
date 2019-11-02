@@ -51,8 +51,64 @@
 	@mixin -grow-half;
 }
 
-.-pack {
-	@mixin -pack;
+.-grow-third {
+	@mixin -grow-third;
+}
+
+.-grow-fourth {
+	@mixin -grow-fourth;
+}
+
+.-keep {
+	@mixin -keep;
+}
+
+.-keep-12 {
+	@mixin -keep-12;
+}
+
+.-keep-11 {
+	@mixin -keep-11;
+}
+
+.-keep-10 {
+	@mixin -keep-10;
+}
+
+.-keep-9 {
+	@mixin -keep-9;
+}
+
+.-keep-8 {
+	@mixin -keep-8;
+}
+
+.-keep-7 {
+	@mixin -keep-7;
+}
+
+.-keep-6 {
+	@mixin -keep-6;
+}
+
+.-keep-5 {
+	@mixin -keep-5;
+}
+
+.-keep-4 {
+	@mixin -keep-4;
+}
+
+.-keep-3 {
+	@mixin -keep-3;
+}
+
+.-keep-2 {
+	@mixin -keep-2;
+}
+
+.-keep-1 {
+	@mixin -keep-1;
 }
 
 .-split {

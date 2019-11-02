@@ -1,12 +1,13 @@
 @define-mixin -split
 	justify-content: space-between
+	margin-left: 0
 
 	& > *
-		width: 100%
+		margin-left: 0
 
 	@media (--screen-tablet)
 		& > *
-			width: calc(100% / var(--split, 1) - var(--gutter))
+			width: calc((100% - (var(--gutter) * (var(--split, 1) - 1))) / var(--split, 1))
 
 @define-mixin -split-2
 	@mixin -split
