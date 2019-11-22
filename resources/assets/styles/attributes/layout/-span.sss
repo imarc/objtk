@@ -3,7 +3,7 @@
 	width: initial
 
 	@media (--screen-sm)
-		flex-basis: calc(((100% + var(--gutter) * 2) * var(--columns) / 12) - var(--gutter) * 2)
+		flex-basis: calc((100% + var(--gutter)) / 12 * var(--columns) - var(--gutter))
 		--columns: 12
 
 @define-mixin -span-12
