@@ -1,3 +1,5 @@
+@import '../_variables.sss'
+
 :root
 
 	/**************************************************************************************************/
@@ -21,18 +23,26 @@
 	--color-shadow: rgba(0,0,0,.5)
 
 	/**************************************************************************************************/
+	/* Variable Overloads
+	/**************************************************************************************************/
+
+	--text-margin: 3rem
+
+	/**************************************************************************************************/
 	/* Container
 	/**************************************************************************************************/
 
 	--container-max-width: 1440px
-	--container-padding-base: var(--padding-base)
-	--container-padding-multiplier: var(--padding-multiplier)
+	--container-padding-base: var(--padding)
+	--container-padding-h-multiplier: var(--padding-h-multiplier)
+	--container-padding-v-multiplier: var(--padding-v-multiplier)
 
 	/**************************************************************************************************/
 	/* Grid
 	/**************************************************************************************************/
 
 	--grid-gutter: var(--gutter)
+	--grid-gutter-multiplier: 2
 
 	/**************************************************************************************************/
 	/* Buttons
@@ -41,7 +51,7 @@
 	--button-bg-color: var(--color-callout)
 	--button-text-color: var(--color-callout-face)
 
-	--button-padding-base: var(--padding-base)
+	--button-padding-base: var(--padding)
 	--button-padding-v-multiplier: .5
 	--button-padding-h-multiplier: 1
 
@@ -49,3 +59,7 @@
 	--button-border-color: var(--border-color)
 	--button-border-width: var(--border-width)
 	--button-border-radius: var(--border-radius)
+
+
+	--icon-size: 6rem
+	--icon-color: var(--amber)

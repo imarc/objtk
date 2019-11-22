@@ -1,8 +1,6 @@
 @define-mixin -grow
 	width: var(--width)
-
-	@media (--screen-tablet)
-		flex-grow: 12
+	height: var(--height, auto)
 
 @define-mixin -grow-full
 	@mixin -grow

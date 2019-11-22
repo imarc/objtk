@@ -1,0 +1,16 @@
+@define-mixin icon
+	@mixin -grow
+	@mixin -align-center
+
+	--width: var(--icon-width, var(--icon-size, 4rem))
+	--height: var(--icon-height, var(--icon-size, 4rem))
+	--padding: var(--icon-padding)
+	--content: var(--icon-content, ?)
+
+	display: inline-block
+	line-height: var(--width)
+	font-size: calc(var(--width) - var(--padding) * 2)
+	content: var(--content)
+
+	& > svg
+		height: calc(var(--width) - var(--padding) * 2)
