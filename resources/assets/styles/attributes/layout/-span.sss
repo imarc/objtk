@@ -1,10 +1,8 @@
 @define-mixin -span
-	flex-grow: 0
-	flex-shrink: 0
-	flex-basis: 100%
+	width: 100%
 
 	@media (--screen-sm)
-		flex-basis: calc((100% + var(--gutter)) / 12 * var(--columns) - var(--gutter))
+		width: calc((100% + var(--gutter)) / 12 * var(--columns) - var(--gutter))
 		--columns: 12
 
 @define-mixin -span-12
