@@ -4,7 +4,7 @@ module.exports = {
 	// Javascript Loader
 	//
 
-	JSLoader: prod => ({
+	JSLoader: (prod) => ({
 		test: /\.js$/,
 		exclude: /node_modules/,
 		use: [
@@ -37,7 +37,10 @@ module.exports = {
 				options: {
 					sourceMap: prod,
 					config: {
-						path: __dirname + '/postcss.config.js'
+						path: __dirname + '/postcss.config.js',
+						ctx: {
+							prod: prod
+						}
 					}
 				}
 			}
@@ -48,7 +51,7 @@ module.exports = {
 	// HTML Loader
 	//
 
-	HTMLLoader: prod => ({
+	HTMLLoader: (prod) => ({
 		test: /\.html$/,
 		loader: 'html-loader',
 		exclude: "/node_modules/"

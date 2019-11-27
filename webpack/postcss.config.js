@@ -1,10 +1,6 @@
-module.exports = prod => ({
+module.exports = ({ options }) => ({
 	parser: 'sugarss',
 	plugins: {
-		'postcss-nested': {},
-		'postcss-mixins': {},
-		'postcss-property-lookup': {},
-		'postcss-color-mod-function': {},
 		'postcss-easy-import': {
 			extensions: [
 				'.sss'
@@ -20,6 +16,10 @@ module.exports = prod => ({
 				'custom-properties': false
 			}
 		},
-		'cssnano': prod
-	},
+		'postcss-mixins': {},
+		'postcss-nested': {},
+		'postcss-simple-vars': {},
+		'postcss-property-lookup': {},
+		'cssnano': options.prod
+	}
 });

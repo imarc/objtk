@@ -31,9 +31,9 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			loaders.JSLoader(command.options.production),
+			loaders.HTMLLoader(command.options.production),
 			loaders.CSSLoader(command.options.production),
-			loaders.HTMLLoader(command.options.production)
+			loaders.JSLoader(command.options.production)
 		]
 	},
 	plugins: [

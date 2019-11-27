@@ -5636,7 +5636,7 @@ postcss-color-hex-alpha@^5.0.3:
     postcss "^7.0.14"
     postcss-values-parser "^2.0.1"
 
-postcss-color-mod-function@^3.0.0, postcss-color-mod-function@^3.0.3:
+postcss-color-mod-function@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-3.0.3.tgz#816ba145ac11cc3cb6baa905a75a49f903e4d31d"
   dependencies:
@@ -6161,7 +6161,7 @@ postcss-selector-parser@^6.0.2:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-simple-vars@^5.0.2:
+postcss-simple-vars@^5.0.0, postcss-simple-vars@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-5.0.2.tgz#e2f81b3d0847ddd4169816b6d141b91d51e6e22e"
   dependencies:
